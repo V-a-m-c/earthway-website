@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+	--brand: #0b69ff;
+	--brand-2: #06b6d4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,body,#root{height:100%;}
+body{
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
+
+@layer components {
+	.btn-primary{
+		@apply bg-gradient-to-r from-indigo-600 to-teal-400 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transform transition;
+	}
+
+	.card-elevated{
+		@apply bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition transform hover:-translate-y-1;
+	}
+}
+
+/* Smooth scrolling for anchor links */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Hero decorative circular images */
+.hero-circle{
+	width: 180px;
+	height: 180px;
+	border-radius: 9999px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(2,6,23,0.2);
+	border: 8px solid rgba(255,255,255,0.85);
+}
+.hero-circle img{width:100%;height:100%;object-fit:cover;}
+
+/* Expertise section patterned dark background */
+.pattern-bg{
+	background-color: #0f172a; /* slate-900 */
+	background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+	background-size: 24px 24px, 100% 100%;
+}
+
+/* Make lists tighter on dark section */
+.pattern-bg ul li{margin-bottom:.5rem}
+
