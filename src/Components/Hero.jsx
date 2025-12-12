@@ -15,10 +15,10 @@ const Hero = () => {
         {/* Decorative circular photos on the right (hidden on small screens) */}
         <div className="hidden lg:block absolute right-8 top-8">
           <div className="hero-circle mb-6">
-            <img src="/assets/Construction_image.jpg" alt="construction-1" />
+            <img src="assets/Construction_image.jpg" alt="construction-1" />
           </div>
           <div className="hero-circle mt-6" style={{width:140,height:140,borderWidth:6}}>
-            <img src="/assets/Construction_image2.jpg" alt="construction-2" />
+            <img src="assets/Construction_image2.jpg" alt="construction-2" />
           </div>
         </div>
       </div>

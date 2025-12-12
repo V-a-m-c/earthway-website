@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-md bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center shadow">
             <img
-              src="/assets/Logo.jpg"
+              src="assets/Logo.jpg"
               alt="Logo"
               className="w-8 h-8 object-contain"
             />
